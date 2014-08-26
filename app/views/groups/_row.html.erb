@@ -1,0 +1,8 @@
+<tr class="group-<%= group.id %>">
+  <td><%= group.name %></td>
+  <td><%= group.description %></td>
+  <td>
+    <%= link_to "Edit", "", class: "edit-group", data: { id: group.id } %>
+    <%= link_to "Delete", "", class: "delete-group", data: { id: group.id } %>
+  </td>
+</tr>

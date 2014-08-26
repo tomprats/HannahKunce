@@ -1,0 +1,12 @@
+<div class="admin">
+  <div class="admin-group">
+    <div class="admin-table">
+      <h3 class="text-center">Groups</h3>
+      <%= render partial: "groups/table", locals: { groups: @groups } %>
+    </div>
+    <div class="admin-form">
+      <h3 class="text-center">Create Group</h3>
+      <%= render partial: "groups/form" %>
+    </div>
+  </div>
+</div>

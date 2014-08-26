@@ -1,0 +1,16 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% groups.each do |group|%>
+      <%= render partial: "groups/row", locals: { group: group } %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= render partial: "groups/edit", locals: { group: groups.last } %>

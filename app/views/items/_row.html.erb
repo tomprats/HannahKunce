@@ -1,0 +1,12 @@
+<tr class="item-<%= item.id %>">
+  <td><%= item.name %></td>
+  <td>$<%= item.price %></td>
+  <td><%= item.description %></td>
+  <td><%= item.group.try(:name) || "None" %></td>
+  <td><%= item.for_sale %></td>
+  <td><%= item.image %></td>
+  <td>
+    <%= link_to "Edit", "", class: "edit-item", data: { id: item.id } %>
+    <%= link_to "Delete", "", class: "delete-item", data: { id: item.id } %>
+  </td>
+</tr>

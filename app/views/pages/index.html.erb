@@ -1,0 +1,25 @@
+<div class="owl-wrapper">
+  <div class="owl-carousel">
+    <% @groups.each do |group| %>
+      <%= link_to "", class: "group-link", data: { id: group.id } do %>
+        <%= image_tag group.image.url %>
+        <div class="group-name"><%= group.name %></div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<% @groups.each do |group| %>
+  <div class="group group-<%= group.id %> hide">
+    <h3 class="main-group-name"><%= group.name %></h3>
+    <div class="main-group-description"><%= group.description %></div>
+    <div class="items">
+      <% group.items.each do |item| %>
+        <%= link_to "", class: "item-link", data: { id: item.id } do %>
+          <%= image_tag item.image.url %>
+          <div class="item-name"><%= item.name %></div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
